@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+	font-family: 'PacificaCondensed';
+	src: url("fonts/Pacifica Condensed Regular.ttf");
+}
+
 /*ブラウザスタイルのリセット*/
 body,h1,h2,h3,p,address,table,thead,tbody,th,td,input,ul,li{
 font-family:"メイリオ";
@@ -10,10 +15,66 @@ font-style:normal;
 text-align:justify;
 list-style: none;
 }
+
 body{
-background:#369;
-padding:20px;
+background: black;
 }
+#wrap{
+    width: 900px;
+    background: url(images/4e1711_faa2940bdb9245399baf062fb1a107b4.png);
+    background-repeat: no-repeat;
+    padding:20px;
+    background-position-x: -500px;
+    margin:20px auto;
+}
+
+h1{ 
+   background: black; 
+   border:solid 5px #2D2525;
+   width:260px;
+   height:160px;
+   margin-bottom: 20px;
+}
+h1 p{
+   color:white;
+   text-align: center;
+   font-family:PacificaCondensed,fantasy;
+   text-shadow: 0px 0px 10px  white;
+   margin: 5px;
+   font-size: 30px;
+}
+#logo{
+    background:url(images/4e1711_d430bfd5532c458189700802859ae478-mv2.png);
+    background-size: 100%;
+    background-position: 1px,1px;
+    width:70px;
+    height: 70px;
+    border-radius: 40%;
+    margin:2px auto;
+    
+}
+#main{
+    /*background-color:pink;*/
+    width:840px;
+    padding:30px;
+    background:rgba(0 ,0,0,0.5);
+    border: solid 1px #860;
+}
+.column{
+    width:800px;
+    background: black;
+    padding:20px;
+    border: solid 1px #960;
+}
+
+.column h2{
+    color: #F3E2A9;
+    margin-bottom: 1em;
+}
+.column p, .column li{
+    color:white;
+}
+
 
 #before_settings li{
     float: left;
@@ -48,4 +109,3 @@ background: #ddd;
 #name{
     text-align: left;
 }
-

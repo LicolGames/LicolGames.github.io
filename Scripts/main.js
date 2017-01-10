@@ -388,7 +388,7 @@ const GetTableCellString = (_num) =>{
     return '<tr id = \"item'+_num+'\">'+
                 '<th scope=\"row\" id = \"name\">アイテム名</th>'+
                 '<td id = \"price\">値段</td>'+
-                '<td id = \"number\"><input type=\"number\" min = \"0\" max = \"10000000\" />'+
+                '<td id = \"number\"><input type=\"number\" min = \"0\" max = \"10000000\" /></td>'+
                 '<td id = \"sum\"></td>'+
                 '<td id = \"taxed\"></td>'+
             '</tr>';
@@ -416,8 +416,8 @@ $('#table_body').empty();
         }
         $('#table_body').append('<tr id = \"sum_record\">'+
                             '<th scope=\"row\" id = \"name\">合計</th>'+
-                            '<td id = \"price\">0</td>'+
-                            '<td id = \"number\">0</input>'+
+                            '<td id = \"price\"></td>'+
+                            '<td id = \"number\"></input></td>'+
                             '<td id = \"sum\">0</td>'+
                             '<td id = \"taxed\">0</td>'+
                         '</tr>)');

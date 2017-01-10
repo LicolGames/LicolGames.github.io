@@ -17,57 +17,67 @@
 <body>
     <div id="wrap">
         <div id="header">
-            <h1>黒い砂漠時給計算機</h1>
+            <h1><div id = "logo"></div>
+            <p>Fox And WOLF XIII</p>
+            <p>KNIGHTS</p>
+            </h1>
         </div>
         <!--/header-->
         <div id="main">
-            <div id="table_field">
-                <form id="before_settings">               
-                    <ul>
-                        <li>狩場<select id="select_hunt_area">><option value = -1>読み込み中です</option></select></li>
-                        <li>税率<input id = "tax_value" type="number" min = "0" max = "10000000" />％</li>
-                    <ul>
-                </form>
-                <form id="count_table">
-                <table>
-                    <thead id="table_head">
-                        <tr>
-                            <th scope="cols">アイテム名</th>
-                            <th scope="cols">売却価格</th>
-                            <th scope="cols">個数</th>
-                            <th scope="cols">小計</th>
-                            <th scope="cols">税引後</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table_body">
-                        <tr id = "item0">
-                            <th scope="row" id = "name">アイテム名</th>
-                            <td id = "price">値段</td>
-                            <td id = "number"><input type="number" min = "0" max = "10000000" step="1"></input>
-                            <td id = "sum">小計</td>
-                            <td id = "taxed">税引後</td>
-                        </tr>
-                        <tr id = "sum_record">
-                            <th scope="row" id = "name">合計</th>
-                            <td id = "price">0</td>
-                            <td id = "number">0</input>
-                            <td id = "sum">0</td>
-                            <td id = "taxed">0</td>
-                        </tr>
-                    </tbody>
-                </table>
-                </form><!--/count_table-->
-            </div><!--/table_field-->
-            
-            <div id = "time_count_field">
-                <form>
-                    <p>狩りをした時間　<input id = "hunt_time" type = "number" min = "0" max = "600000000"/> 分 </p>
-                    <p>時給 <input id = "money_per_hour" type = "text" readonly = "readonly" /></p>
-                </form>
+            <div class="column">
+                <h2>黒い砂漠時給計算機</h2>
+                <div id="table_field">
+                    <form id="before_settings">
+                        <ul>
+                            <li>狩場<select id="select_hunt_area">><option value = -1>読み込み中です</option></select></li>
+                            <li>税率<input id="tax_value" type="number" min="0" max="10000000" />％</li>
+                            <ul>
+                    </form>
+                    <form id="count_table">
+                        <table>
+                            <thead id="table_head">
+                                <tr>
+                                    <th scope="cols">アイテム名</th>
+                                    <th scope="cols">売却価格</th>
+                                    <th scope="cols">個数</th>
+                                    <th scope="cols">小計</th>
+                                    <th scope="cols">税引後</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table_body">
+                                <tr id="item0">
+                                    <th scope="row" id="name">アイテム名</th>
+                                    <td id="price">値段</td>
+                                    <td id="number"><input type="number" min="0" max="10000000" step="1"></input>
+                                        <td id="sum">小計</td>
+                                        <td id="taxed">税引後</td>
+                                </tr>
+                                <tr id="sum_record">
+                                    <th scope="row" id="name">合計</th>
+                                    <td id="price">0</td>
+                                    <td id="number">0</input>
+                                        <td id="sum">0</td>
+                                        <td id="taxed">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!--/count_table-->
+                </div>
+                <!--/table_field-->
 
-            </div><!--/time_count_field-->
+                <div id="time_count_field">
+                    <form>
+                        <p>狩りをした時間　<input id="hunt_time" type="number" min="0" max="600000000" /> 分 </p>
+                        <p>時給 <input id="money_per_hour" type="text" readonly="readonly" /></p>
+                    </form>
 
-        </div><!--/main-->
+                </div>
+                <!--/time_count_field-->
+            </div>
+            <!--/column-->
+        </div>
+        <!--/main-->
 
         <div id="footer">
 
