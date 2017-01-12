@@ -112,7 +112,7 @@ class SpledSheetDatas {
                 url: url,
                 type: 'GET',
                 dataType: 'jsonp',
-                timeout: 1000,
+                timeout: 10000,
                 success: (data) => {
                     //メインのデータを抽出
                     let sheets_entry = data.feed.entry;
