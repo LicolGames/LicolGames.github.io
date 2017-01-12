@@ -117,7 +117,7 @@ class SpledSheetDatas {
                     //メインのデータを抽出
                     let sheets_entry = data.feed.entry;
                     let cell_datas = [];
-                    for (const key of Object.keys(sheets_entry)) {
+                    for (let key of Object.keys(sheets_entry)) {
                         let celldata = sheets_entry[key].gs$cell;
                         cell_datas.push(new CellData(celldata.$t, celldata.row, celldata.col));
                     }
