@@ -385,12 +385,12 @@ const AddFigure = (_str) => {
 
 //アイテムの列のテンプレート
 const GetTableCellString = (_num) =>{
-    return '<tr id = \"item'+_num+'\">'+
-                '<th scope=\"row\" id = \"name\">アイテム名</th>'+
-                '<td id = \"price\">値段</td>'+
-                '<td id = \"number\"><input type=\"number\" min = \"0\" max = \"10000000\" /></td>'+
-                '<td id = \"sum\"></td>'+
-                '<td id = \"taxed\"></td>'+
+    return '<tr id = "item'+_num+'">'+
+                '<th scope="row" id = "name">アイテム名</th>'+
+                '<td id = "price">値段</td>'+
+                '<td id = "number"><input placeholder = "0" maxlength="10" type="number" min = "0" max = "9999999999" />個</td>'+
+                '<td id = "sum"></td>'+
+                '<td id = "taxed"></td>'+
             '</tr>';
 }
 

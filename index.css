@@ -8,7 +8,7 @@
 /*ブラウザスタイルのリセット*/
 body,h1,h2,h3,p,address,table,thead,tbody,th,td,input,ul,li{
 font-family:"メイリオ";
-line-height:1em;
+line-height:1.5em;
 margin:0px;
 padding:0px;
 font-style:normal;
@@ -95,17 +95,36 @@ th,td{
 
 td{
     text-align: right;
-    background: #fff;
 }
 
 #table_head tr th {
 text-align: center;
-background: #ddd;
+background: #fff;
 }
-#table_body tr th{
+
+#table_body tr{
     background: #fff;
+}
+#table_body tr:nth-child(odd){
+    background: #F3E2A9;
 }
 
 #name{
     text-align: left;
+}
+
+td,th{
+    padding:0.5em;
+}
+
+#number{
+    padding-top: 0.0em;
+    padding-bottom: 0.0em;
+}
+input{
+    line-height: 1em;
+    font-size: 1em;
+    margin-right: 0.5em;
+    text-align: right;
+    display: inline-block;
 }
