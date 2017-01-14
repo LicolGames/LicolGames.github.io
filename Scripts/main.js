@@ -233,16 +233,16 @@ const CreateHuntAreaTable = (_data) => {
     //有効な狩場の列の最大値を取得
     let last_row_num = Enumerable.From(_data)
         .Where((record) => { return (record.col === "1"); })
-        .Max((record) => record.row);
+        .Max((record) => parseInt(record.row,10));
 
     //有効な全て狩場の列を取得
     let row_records = Enumerable.From(_data)
         .Where((record) => { return (parseInt(record.col, 10) <= 2) })
-        .Where((record) => { return (record.row <= last_row_num); })
+        .Where((record) => { return (parseInt(record.row,10) <= last_row_num); })
 
     for (let i = 2; i <= last_row_num; i++) {
         let row_record = Enumerable.From(row_records)
-            .Where((record) => { return (record.row == i) })
+            .Where((record) => { return (parseInt(record.row,10) == i) })
             .ToArray();
         let create_hunt_area = new HuntArea();
         //idの設定
@@ -260,16 +260,16 @@ const CreateHuntAreaTable = (_data) => {
     //有効な領域の列の最大値を取得
     last_row_num = Enumerable.From(_data)
         .Where((record) => { return (record.col === "3"); })
-        .Max((record) => record.row);
+        .Max((record) => parseInt(record.row));
 
     //有効な全て領域の列を取得
     row_records = Enumerable.From(_data)
         .Where((record) => { return (parseInt(record.col, 10) <= 4) && (parseInt(record.col, 10) > 2) })
-        .Where((record) => { return (record.row <= last_row_num); })
+        .Where((record) => { return (parseInt(record.row ,10)<= last_row_num); })
 
     for (let i = 2; i <= last_row_num; i++) {
         let row_record = Enumerable.From(row_records)
-            .Where((record) => { return (record.row == i) })
+            .Where((record) => { return (parseInt(record.row,10) == i) })
             .ToArray();
         let create_region = new Region();
         //idの設定
