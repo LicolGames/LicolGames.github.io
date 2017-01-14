@@ -91,6 +91,7 @@ h1 p{
 
 th,td{
     margin:5px;
+    white-space: nowrap;
 }
 
 td{
