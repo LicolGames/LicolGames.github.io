@@ -30,7 +30,7 @@
                     <form id="before_settings">
                         <ul>
                             <li>狩場<select id="select_hunt_area">><option value = -1>読み込み中です</option></select></li>
-                            <li>税率<input id="tax_value" type="number" min="0" max="10000000" />％</li>
+                            <li>税率<input  type="number" min="0" max="10000" id="tax_value"/>％</li>
                             </ul>
                     </form>
                     <form id="count_table">
@@ -45,17 +45,10 @@
                                 </tr>
                             </thead>
                             <tbody id="table_body">
-                                <tr id="item0">
-                                    <th scope="row" id="name">アイテム名</th>
-                                    <td id="price">値段</td>
-                                    <td id="number"><input type="number" min="0" max="10000000" step="1"></input>
-                                        <td id="sum">小計</td>
-                                        <td id="taxed">税引後</td>
-                                </tr>
                                 <tr id="sum_record">
                                     <th scope="row" id="name">合計</th>
                                     <td id="price">0</td>
-                                    <td id="number">0</input>
+                                    <td id="number">0</input></td>
                                         <td id="sum">0</td>
                                         <td id="taxed">0</td>
                                 </tr>
@@ -68,8 +61,8 @@
 
                 <div id="time_count_field">
                     <form>
-                        <p>狩りをした時間　<input id="hunt_time" type="number" min="0" max="600000000" /> 分 </p>
-                        <p>時給 <input id="money_per_hour" type="text" readonly="readonly" /></p>
+                        <p>狩りをした時間　<input type="number" min="0" max="600000000" id="hunt_time"/> 分 </p>
+                        <p>時給 <input type="text" readonly="readonly" id="money_per_hour"/></p>
                     </form>
 
                 </div>
@@ -80,7 +73,7 @@
         <!--/main-->
 
         <div id="footer">
-
+            <address>Copyright &copy; 2017 &nbsp;<a href="mailto:games.shino.black@gmail.com">LicolGames</a></address>
         </div>
         <!--/footer-->
 

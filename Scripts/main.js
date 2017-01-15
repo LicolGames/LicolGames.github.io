@@ -45,8 +45,10 @@ $(function () {
 
         });//エラーの場合、中でアラートが走るためこちらでは何もしない
 
-    //================================
+    // /初期化=========================
     
+    //その他文章の設定
+
     //税率の初期値の設定とイベントの設定
     $('form').submit(function() {return false;});
     $('#tax_value').val(0);
@@ -54,6 +56,7 @@ $(function () {
         if($('#tax_value').val() ===""){
             $('#tax_value').val(0);
         }
+        this.val(InTheRange(this));
         CountAllTales(select_drop_table,table_row_count);
         CountSum(table_row_count);
         CountMonyPerHour();
@@ -65,6 +68,7 @@ $(function () {
         if($('#hunt_time').val()===""){
             $('#hunt_time').val(0);
         }
+        this.val(InTheRange(this));
         CountAllTales(select_drop_table,table_row_count);
         CountSum(table_row_count);
         CountMonyPerHour();
@@ -85,7 +89,7 @@ $(function () {
     });
 
 });
-
+// /main
 
 //セルのデータ構造体==========================
 class CellData {
@@ -388,7 +392,7 @@ const GetTableCellString = (_num) =>{
     return '<tr id = "item'+_num+'">'+
                 '<th scope="row" id = "name">アイテム名</th>'+
                 '<td id = "price">値段</td>'+
-                '<td id = "number"><input placeholder = "0" maxlength="10" type="number" min = "0" max = "9999999999" />個</td>'+
+                '<td id = "number"><input type="number" min = "0" max = "9999999999" placeholder = "0"/>個</td>'+
                 '<td id = "sum"></td>'+
                 '<td id = "taxed"></td>'+
             '</tr>';
@@ -408,12 +412,15 @@ $('#table_body').empty();
                 if($('#table_body > #item'+i+' > #number > input').val()===""){
                    $('#table_body > #item'+i+' > #number > input').val(0); 
                 }
+                $('#table_body > #item'+i+' > #number > input').val(InTheRange($('#table_body > #item'+i+' > #number > input')));
                 CountTable(_selected_drop_table,i);
                 CountSum(_selected_drop_table.length);
                 CountMonyPerHour();
             });
             
-        }
+        };
+
+        //合計値表示用オブジェクトの作成
         $('#table_body').append('<tr id = \"sum_record\">'+
                             '<th scope=\"row\" id = \"name\">合計</th>'+
                             '<td id = \"price\"></td>'+
@@ -460,4 +467,12 @@ const CountMonyPerHour = () => {
 let taxed_sum = RemoveFigure($('#table_body > #sum_record > #taxed').html());
 let length_scale = (parseFloat($(hunt_time).val())/60.0);
 $('#money_per_hour').val(AddFigure(Math.round(taxed_sum * length_scale)));
+}
+
+//範囲整形
+const InTheRange = (_input_object)=>{
+    let value = _input_object.val();
+    if(parseInt(_input_object.val())>parseInt(_input_object[0].max)){value =_input_object[0].max;console.log("MAX");}
+    else if(parseInt(_input_object.val())<parseInt(_input_object[0].min)){value =_input_object[0].min;console.log("MIN");}
+    return value;
 }

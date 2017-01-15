@@ -23,8 +23,9 @@ background: black;
     width: 900px;
     background: url(images/4e1711_faa2940bdb9245399baf062fb1a107b4.png);
     background-repeat: no-repeat;
-    padding:20px;
     background-position-x: -500px;
+    background-attachment: fixed;
+    padding:20px;  
     margin:20px auto;
 }
 
@@ -59,12 +60,14 @@ h1 p{
     padding:30px;
     background:rgba(0 ,0,0,0.5);
     border: solid 1px #860;
+    margin-bottom: 20px;
 }
 .column{
     width:800px;
     background: black;
     padding:20px;
     border: solid 1px #960;
+    margin-bottom: 20px;
 }
 
 .column h2{
@@ -91,6 +94,7 @@ h1 p{
 
 th,td{
     margin:5px;
+    padding:4px;
     white-space: nowrap;
 }
 
@@ -112,19 +116,35 @@ background: #fff;
 
 #name{
     text-align: left;
-}
-
-td,th{
-    padding:0.5em;
+    width: 150px;
 }
 
 #number{
     padding-top: 0.0em;
     padding-bottom: 0.0em;
+    width: 150px;
+}
+#number input{
+    width:130px;
 }
 input{
     line-height: 1em;
     font-size: 1em;
     margin-right: 0.5em;
     text-align: right;
+}
+
+#table_body #price{
+    width: 120px;
+}
+#table_body #sum,#table_body #taxed{
+width: 122px;
+}
+#footer{
+    background: black;
+}
+
+#footer p,#footer address a , #footer address{
+    text-align: center;
+    color: White;
 }
