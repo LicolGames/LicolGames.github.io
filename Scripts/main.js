@@ -56,7 +56,7 @@ $(function () {
         if($('#tax_value').val() ===""){
             $('#tax_value').val(0);
         }
-        this.val(InTheRange(this));
+        this.val=(InTheRange($('#tax_value')));
         CountAllTales(select_drop_table,table_row_count);
         CountSum(table_row_count);
         CountMonyPerHour();
@@ -68,7 +68,7 @@ $(function () {
         if($('#hunt_time').val()===""){
             $('#hunt_time').val(0);
         }
-        this.val(InTheRange(this));
+        this.val=(InTheRange($('#hunt_time')));
         CountAllTales(select_drop_table,table_row_count);
         CountSum(table_row_count);
         CountMonyPerHour();
