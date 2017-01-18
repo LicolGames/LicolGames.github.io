@@ -465,7 +465,7 @@ const CountSum = (_row_size) =>{
 //時給の計算
 const CountMonyPerHour = () => {
 let taxed_sum = RemoveFigure($('#table_body > #sum_record > #taxed').html());
-let length_scale = (parseFloat($(hunt_time).val())/60.0);
+let length_scale = (60.0/parseFloat($(hunt_time).val()));
 $('#money_per_hour').val(AddFigure(Math.round(taxed_sum * length_scale)));
 }
 
