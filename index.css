@@ -20,14 +20,19 @@ body{
 background: black;
 }
 #wrap{
+    position: relative;
     width: 900px;
+    
     background: url(images/4e1711_faa2940bdb9245399baf062fb1a107b4.png);
     background-repeat: no-repeat;
-    background-position-x: -500px;
+    background-position: 55% 20px;/*padding-top分*/
     background-attachment: fixed;
+    /*images/4e1711_faa2940bdb9245399baf062fb1a107b4.png専用*/
+
     padding:20px;  
     margin:20px auto;
 }
+
 
 h1{ 
    background: black; 
